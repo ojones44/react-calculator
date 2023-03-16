@@ -1,8 +1,8 @@
 function Screen() {
 	return (
 		<div className='operand-box'>
-			<div className='second-operand'>6565 +</div>
-			<div className='first-operand'>65656516516565</div>
+			<div className='previous-operand'>316 -</div>
+			<div className='first-operand'>65651654</div>
 		</div>
 	);
 }

@@ -10,8 +10,8 @@ function App() {
 	return (
 		<div className='container'>
 			<Header />
-			<Screen />
 			<div className='calculator-grid'>
+				<Screen />
 				<CalcButtons />
 			</div>
 		</div>

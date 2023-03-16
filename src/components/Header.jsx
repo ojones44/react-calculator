@@ -1,7 +1,7 @@
 function Header() {
 	return (
 		<div className='title'>
-			<h3>😎 Jonesy Calculations 😎</h3>
+			<h2>Jonesy's Calculator 🧮</h2>
 		</div>
 	);
 }

@@ -1,11 +1,22 @@
 /* CSS Reset */
 
 #root {
+	--clr-primary: hsl(240, 5%, 96%);
+	--clr-secondary: hsl(269, 79%, 55%);
+	--clr-neutral: white;
+	--button-accent: hsl(269, 87%, 63%);
+	--clr-operand: hsl(251, 20%, 69%);
+	--operand-accent: hsl(251, 12%, 73%);
+
+	--fc-black: black;
+
 	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 	font-weight: normal;
 }
 
-* {
+*,
+*::before,
+*::after {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -13,33 +24,19 @@
 
 body {
 	min-height: 100%;
-	text-align: center;
-	color: black;
-
-	background: #ffeeee; /* fallback for old browsers */
-	background: -webkit-linear-gradient(
-		to right,
-		#ddefbb,
-		#ffeeee
-	); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(
-		to right,
-		#ddefbb,
-		#ffeeee
-	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: var(--clr-neutral);
 }
 
 button {
-	border-radius: 25px;
-	margin: 3px;
-	border: 1px solid green;
+	border-radius: 48px;
+	border: none;
 	font-family: inherit;
-	background-color: hsl(0, 0%, 10%);
-	color: white;
+	background-color: var(--clr-neutral);
 	cursor: pointer;
+	font-size: 2rem;
 }
 button:hover {
-	background-color: hsla(0, 0%, 10%, 0.79);
+	background-color: var(--clr-secondary);
 }
 button:focus,
 button:focus-visible {
@@ -49,44 +46,63 @@ button:focus-visible {
 /* Classes */
 
 .container {
+	margin: 0 auto;
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 400px;
-	margin: 0 auto;
 }
 
 .title {
-	padding: 2rem;
+	padding-bottom: 2rem;
 }
 
 .operand-box {
-	border-radius: 25px;
+	grid-column: 1 / -1;
+	border-radius: 10px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-end;
-	/* flex-wrap: wrap; */
-	width: 100%;
-	border: 1px solid red;
-	margin: 5px;
 	padding: 20px;
+	word-wrap: break-word;
+	word-break: break-all;
 }
 
 .first-operand {
-	font-size: 2em;
+	font-size: 2.5rem;
+}
+
+.previous-operand {
+	font-size: 1.2rem;
+	color: var(--clr-operand);
 }
 
 .calculator-grid {
-	width: 100%;
-	margin: 0 auto;
+	border-radius: 10px;
+	background-color: var(--clr-primary);
+	padding: 20px;
 	display: grid;
-	gap: 2px;
-	grid-template-columns: repeat(4, 6rem);
-	grid-template-rows: minmax(6rem, auto) repeat(5, 6rem);
+	gap: 7px;
+	grid-template-columns: repeat(4, 5rem);
+	grid-template-rows: minmax(7rem, auto) repeat(5, 5rem);
 }
 
 .span-two {
 	grid-column: span 2;
+	background-color: var(--clr-secondary);
+}
+
+.span-two:hover {
+	background-color: var(--button-accent);
+}
+
+.operation-type {
+	background-color: var(--clr-operand);
+	padding-bottom: 5px;
+}
+
+.operation-type:hover {
+	background-color: var(--operand-accent);
 }
