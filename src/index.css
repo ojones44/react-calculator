@@ -28,19 +28,24 @@ body {
 }
 
 button {
+	vertical-align: middle;
 	border-radius: 48px;
-	border: none;
+	border: solid 1px rgba(0, 0, 0, 0);
 	font-family: inherit;
 	background-color: var(--clr-neutral);
 	cursor: pointer;
 	font-size: 2rem;
+	line-height: 0px;
+	padding-bottom: 5px;
 }
 button:hover {
 	background-color: var(--clr-secondary);
 }
 button:focus,
 button:focus-visible {
-	outline: 4px auto -webkit-focus-ring-color;
+	/* background-color: var(--clr-secondary); */
+	/* border: 1px solid black;	 */
+	outline: none;
 }
 
 /* Classes */
@@ -100,7 +105,7 @@ button:focus-visible {
 
 .operation-type {
 	background-color: var(--clr-operand);
-	padding-bottom: 5px;
+	padding-bottom: 8px;
 }
 
 .operation-type:hover {

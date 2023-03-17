@@ -1,8 +1,10 @@
-function Screen() {
+function Screen({ crtOperand, prevOperand, operation }) {
 	return (
 		<div className='operand-box'>
-			<div className='previous-operand'>316 -</div>
-			<div className='first-operand'>65651654</div>
+			<div className='previous-operand'>
+				{prevOperand} {operation}
+			</div>
+			<div className='first-operand'>{crtOperand}</div>
 		</div>
 	);
 }
