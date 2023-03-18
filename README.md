@@ -2,7 +2,7 @@
 <h1>
 Calculator 🧮
 </h1>
-<img src="./assets/app-snap.png" width="350" />
+<img src="./src/images/calculator-snap.png" width="300" />
 </div>
 
 ---

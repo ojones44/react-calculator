@@ -1,6 +1,3 @@
-// Asset Imports
-import BackspaceIcon from '../assets/embedded-svgs';
-
 // Actions
 import { ACTIONS } from '../reducer/reducer';
 
