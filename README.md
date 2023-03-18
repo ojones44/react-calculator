@@ -13,4 +13,6 @@ This is a calculator app that was made to practice using React and the useReduce
 
 This app can be used to do quick math, and by my calculations, that's not a bad thing 🤪
 
+> Deployed here: https://oj-react-calculator.netlify.app/
+
 ---
