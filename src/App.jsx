@@ -4,7 +4,7 @@ import { useReducer } from 'react';
 // Component Imports
 import Header from './components/Header';
 import Screen from './components/Screen';
-import CalcButtons from './components/calcButtons';
+import CalcButtons from './components/CalcButtons';
 
 // Reducer Imports
 import { initialStates, reducer } from './reducer/reducer';
